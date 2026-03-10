@@ -474,6 +474,23 @@ function buildResponse(text) {
 // Estado de conversación
 var estadoChat = { paso: 'inicio', unidad: null };
 
+// Event delegation para botones dinámicos
+document.addEventListener('click', function(e) {
+  if (e.target && e.target.id === 'btn-cerrar-consulta') {
+    cerrarConsulta();
+  }
+});
+```
+
+Después buscá:
+```
+onclick="cerrarConsulta()"
+```
+
+Y reemplazalo por:
+```
+id="btn-cerrar-consulta"
+
 var sectores = [
   'ESTÉTICA / CHAPA',
   'FRENOS',
